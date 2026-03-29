@@ -3,6 +3,8 @@ import pandas as pd
 
 def check_nulls(df: pd.DataFrame) -> dict:
     """Return null counts and percentages per column."""
+    if len(df) == 0:
+        return {'null_counts': {}, 'null_pcts': {}}
     null_counts = df.isnull().sum()
     null_pcts = (null_counts / len(df) * 100).round(2)
     return {
