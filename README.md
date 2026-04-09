@@ -17,4 +17,11 @@ cd git-branching-practice
 pip install -r requirements.txt
 pytest tests/ -v
 
+## Docker
+
+docker pull eodavis/data-checker:v1.0
+docker run --rm eodavis/data-checker:v1.0
+
+Image: https://hub.docker.com/r/eodavis/data-checker
+
 ## Part of EODavis 252-project journey
